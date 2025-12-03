@@ -4,7 +4,7 @@ class Solution:
         ans=0
         for i in range(1,len(nums)):
             ans=max(ans,(nums[i]-minV))
-            minV=min(minV,nums[i])
+            minV=min(minV,nums[i]) 
         if ans==0:
             ans=-1 
        

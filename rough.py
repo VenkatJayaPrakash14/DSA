@@ -1,13 +1,9 @@
-# a=[7,1,5,4]
-# minV=a[0]
-# ans=0
-# for i in range(1,len(a)):
-#     ans=max(ans,(a[i]-minV))
-#     minV=min(minV,a[i])
-# print(ans)
-
-nums = [1, 1, 2, 2, 3, 3, 4]
-k = remove_duplicates(nums)
-
-print("Count:", k)
-print("Array without duplicates:", nums[:k])
+def replaceElements(arr):
+        n=len(arr)
+        rmax=-1
+        for i in range(n-1,-1,-1): 
+            temp=arr[i]
+            arr[i]=rmax
+            rmax=max(rmax,temp)   
+        return arr
+print(replaceElements([17,18,5,4,6,1]))
